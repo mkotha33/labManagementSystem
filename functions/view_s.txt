@@ -1,0 +1,1 @@
+create view view_1 as(select distinct equipment.name as one,student.s_id,student.name from student,equip_issued_by_students,equipment where (student.s_id = 2001 and equipment.eq_id in (select distinct equip_issued_by_students.eq_id from equip_issued_by_students where equip_issued_by_students.s_id = 2001)));
